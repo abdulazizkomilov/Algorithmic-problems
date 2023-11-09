@@ -6,3 +6,5 @@ def convert_to_binary(num: int) -> str:
         num //= 2
 
     return result[::-1]
+
+convert_to_binary(547)
