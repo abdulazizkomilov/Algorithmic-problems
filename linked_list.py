@@ -4,7 +4,6 @@ class Node:
         self.next = None
         
 
-
 def print_element(head: Node) -> Node:
     curr = head
     while curr is not None:
