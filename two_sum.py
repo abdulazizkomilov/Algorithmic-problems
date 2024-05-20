@@ -19,15 +19,38 @@
 # print(twoSum(nums=[3, 2, 4], target=6))
 # # print(twoSum(nums=[3, 2, 4, 12, 8], target=10))
 
+# nums=[2, 7, 11, 15], target=9
 
-def twoSum(nums: list[int], target: int) -> list[int]:
-    f = {}
-    for i, n in enumerate(nums):
-        kichik = target - n
-        if kichik in f:
-            return [f[kichik], i]
-        f[n] = i
-    return
+# nums=[2, 7, 11, 15]
+# target=9
+
+# nums=[3, 2, 4, 12, 8], target=10
 
 
-print(twoSum(nums=[3, 2, 4], target=6))
+
+
+
+
+
+# def twoSum(nums: list[int], target: int) -> list[int]:
+#     f = {}
+#     for i, n in enumerate(nums):
+#         kichik = target - n
+#         if kichik in f:
+#             return [f[kichik], i]
+#         f[n] = i
+#     return
+
+
+# nums=[3, 2, 4]
+# print(twoSum(nums, target=6))
+
+# nums_index = twoSum(nums=[3, 2, 4], target=6)
+# print(list(map(lambda x: nums[x], nums_index)))
+
+
+
+
+
+
+
