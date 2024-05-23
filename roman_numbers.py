@@ -34,11 +34,9 @@
 # Output: 1994
 # Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 
-# s = "III"
-# s = "LVIII"
-s = "MCMXCIV"
 
-def romanToInt(s: str) -> int:
+
+def romanToInt(s):
     roman_values = {
         "I": 1,
         "V": 5,
@@ -48,10 +46,8 @@ def romanToInt(s: str) -> int:
         "D": 500,
         "M": 1000
         }
-    
     total = 0
     prev_value = 0
-
     for char in s:
         current_value = roman_values[char]
         if current_value > prev_value:
@@ -59,10 +55,13 @@ def romanToInt(s: str) -> int:
         else:
             total += current_value
         prev_value = current_value
-
     return total
-
-
+ 
+a = "III"
+b = "LVIII"
+s = "MCMXCIV"
+print(romanToInt(a))
+print(romanToInt(b))
 print(romanToInt(s))
 
 
