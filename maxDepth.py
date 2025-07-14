@@ -27,23 +27,20 @@ count = 0
 """
 
 
-def maxDepth(s: str) -> int:
-    brackets = {')', '(', ']', '[', '}', '{'}
-    pairs = {')': '(', ']': '[', '}': '{'}
-    count = 0
+def maxDepth(self, s: str) -> int:
     stack = []
-    
-    for i in s:
-        if i in brackets:
-            stack.append(i)
-            if stack[-1] == i and i in pairs:
+    pairs = {')': '(', ']': '[', '}': '{'}
+    max_depth = 0
+
+    for char in s:
+        if char in pairs.values():
+            stack.append(char)
+            max_depth = max(max_depth, len(stack))
+        elif char in pairs:
+            if stack and stack[-1] == pairs[char]:
                 stack.pop()
-                stack.pop()
-                
-            if count < len(stack):
-                count = len(stack)
-        
-    return count
+
+    return max_depth if not stack else -1
 
 s = "(1+(2*3)+((8)/4))+1"
 print(maxDepth(s))
